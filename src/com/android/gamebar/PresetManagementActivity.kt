@@ -104,10 +104,8 @@ class PresetManagementActivity : CollapsingToolbarBaseActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             
-            // Notify fragment to refresh UI
-            val intent = Intent("com.android.gamebar.PRESET_LOADED")
-            sendBroadcast(intent)
-            
+            // Set result to notify parent activity to refresh
+            setResult(RESULT_OK)
             finish()
         } else {
             Toast.makeText(this, R.string.toast_preset_load_failed, Toast.LENGTH_SHORT).show()

@@ -6,10 +6,8 @@
 
 package com.android.gamebar
 
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
@@ -39,11 +37,12 @@ class GameBarFragment : SettingsBasePreferenceFragment() {
         uri?.let { importPresetFromUri(it) }
     }
     
-    private val presetLoadedReceiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            if (intent?.action == "com.android.gamebar.PRESET_LOADED") {
-                refreshPreferences()
-            }
+    private val presetManagementLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            // Preset was loaded, refresh UI
+            refreshPreferences()
         }
     }
     private var fpsSwitch: SwitchPreferenceCompat? = null
@@ -193,7 +192,8 @@ class GameBarFragment : SettingsBasePreferenceFragment() {
         // Manage presets
         val managePresetsPref: Preference? = findPreference("preset_manage")
         managePresetsPref?.setOnPreferenceClickListener {
-            startActivity(Intent(requireContext(), PresetManagementActivity::class.java))
+            val intent = Intent(requireContext(), PresetManagementActivity::class.java)
+            presetManagementLauncher.launch(intent)
             true
         }
         
@@ -567,9 +567,6 @@ class GameBarFragment : SettingsBasePreferenceFragment() {
     override fun onResume() {
         super.onResume()
         
-        val filter = IntentFilter("com.android.gamebar.PRESET_LOADED")
-        requireContext().registerReceiver(presetLoadedReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
-        
         if (!hasUsageStatsPermission(requireContext())) {
             requestUsageStatsPermission()
         }
@@ -579,16 +576,6 @@ class GameBarFragment : SettingsBasePreferenceFragment() {
             } else {
                 context.stopService(Intent(context, GameBarMonitorService::class.java))
             }
-        }
-    }
-    
-    override fun onPause() {
-        super.onPause()
-        // Unregister broadcast receiver
-        try {
-            requireContext().unregisterReceiver(presetLoadedReceiver)
-        } catch (e: Exception) {
-            // Receiver not registered
         }
     }
 
