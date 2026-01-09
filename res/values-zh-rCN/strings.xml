@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 kenway214
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- GameBar -->
+    <string name="app_title">游戏栏</string>
+    <string name="tile_add">添加磁贴</string>
+    <string name="tile_added">磁贴已添加</string>
+    <string name="tile_not_added">磁贴未添加</string>
+    <string name="tile_already_added">磁贴已存在</string>
+    <string name="tile_on">开启</string>
+    <string name="tile_off">关闭</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">数值: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">默认</string>
+    <string name="custom_seekbar_default_value_to_set">默认值: <xliff:g id="v">%s</xliff:g>\n长按设置</string>
+    <string name="custom_seekbar_default_value_is_set">默认值已设置</string>
+
+    <!-- GameBar Overlay -->
+    <string name="game_bar_title">游戏栏</string>
+    <string name="game_bar_summary">启用系统悬浮窗（帧数、温度等）</string>
+    <string name="overlay_permission_required">需要悬浮窗权限</string>
+    <string name="overlay_permission_granted">已授予悬浮窗权限</string>
+    <string name="overlay_permission_denied">悬浮窗权限被拒绝</string>
+    <string name="game_bar_tile_label">游戏栏</string>
+    <string name="game_bar_tile_description">切换游戏悬浮窗</string>
+    <string name="game_bar_user_guide">用户指南</string>
+    <string name="game_bar_user_guide_url">https://github.com/kenway214/packages_apps_GameBar/blob/main/GAMEBAR_USER_GUIDE.md</string>
+
+    <!-- ColorPicker -->
+    <string name="gamebar_default_title">选择颜色</string>
+    <string name="gamebar_presets">预设</string>
+    <string name="gamebar_custom">自定义</string>
+    <string name="gamebar_select">选择</string>
+    <string name="gamebar_transparency">透明度</string>
+
+    <!-- Toast Messages - Overlay -->
+    <string name="toast_overlay_format">悬浮窗格式: %s</string>
+    <string name="toast_auto_logging_enabled">此应用已启用自动日志记录。日志将自动保存。</string>
+    <string name="toast_manual_logging_stopped">日志已停止并保存</string>
+    <string name="toast_capture_stopped">捕获已停止，数据已导出</string>
+    <string name="toast_capture_started">捕获已开始</string>
+    <string name="toast_screenshot_taken">截图已保存</string>
+    <string name="toast_screenshot_failed">截图失败</string>
+    <string name="toast_screen_recorder_unavailable">屏幕录制不可用</string>
+    <string name="toast_screen_recording_started">屏幕录制已开始</string>
+    <string name="toast_screen_recording_stopped">屏幕录制已停止</string>
+    <string name="toast_screen_recording_failed">无法切换屏幕录制</string>
+    <string name="toast_manual_logging_started">%s: 手动日志记录已开始</string>
+    <string name="toast_manual_logging_started_pkg">已开始为 %s 记录日志</string>
+
+    <!-- Toast Messages - Logs -->
+    <string name="toast_error_initializing">初始化日志监控时出错: %s</string>
+    <string name="toast_no_manual_logs">未找到手动日志</string>
+    <string name="toast_failed_analyze_log">分析日志文件失败</string>
+    <string name="toast_file_location">文件位置: %s</string>
+    <string name="toast_file_saved_at">文件保存于: %s</string>
+    <string name="toast_log_deleted">日志文件已删除</string>
+    <string name="toast_log_delete_failed">删除日志文件失败</string>
+    <string name="toast_error_deleting_file">删除文件时出错: %s</string>
+    <string name="toast_error_loading_apps">加载应用时出错: %s</string>
+    <string name="toast_error_loading_logs">加载日志时出错: %s</string>
+    <string name="toast_saved_file">已保存: %s</string>
+    <string name="toast_failed_save">保存失败: %s</string>
+    <string name="toast_error_generic">错误: %s</string>
+    <string name="toast_graphics_ready">图表已准备好分享！</string>
+    <string name="toast_failed_share">分享失败: %s</string>
+
+    <!-- Dialog Titles -->
+    <string name="dialog_title_manual_logs">手动日志</string>
+    <string name="dialog_title_analyzing_log">正在分析日志...</string>
+    <string name="dialog_title_delete_log">删除日志文件</string>
+    <string name="dialog_title_session_analytics">📊 运行分析</string>
+
+    <!-- Dialog Messages -->
+    <string name="dialog_message_analyzing">请稍候，正在分析会话数据。</string>
+    <string name="dialog_message_delete_log">确定要删除此日志文件吗？\n\n%s</string>
+
+    <!-- Button Labels -->
+    <string name="button_close">关闭</string>
+    <string name="button_delete">删除</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_actions">⋮ 操作</string>
+    <string name="button_capturing">正在捕获...</string>
+    <string name="button_start_capture">开始捕获</string>
+    <string name="button_enable_per_app">启用单应用日志</string>
+    <string name="button_no_apps_enabled">未启用应用</string>
+    <string name="button_per_app_active">单应用日志记录已激活</string>
+
+    <!-- Intent Chooser Titles -->
+    <string name="chooser_share_log">分享日志文件</string>
+    <string name="chooser_share_graphics">分享图表</string>
+
+    <!-- Intent Extras -->
+    <string name="intent_extra_subject">游戏栏性能日志</string>
+    <string name="intent_extra_text">游戏栏性能日志文件: %s</string>
+
+    <!-- Search Hints -->
+    <string name="hint_search_logs">搜索日志...</string>
+    <string name="hint_search_apps">搜索应用...</string>
+
+    <!-- Preset Management -->
+    <string name="preset_category_title">配置预设</string>
+    <string name="preset_category_summary">保存并管理您的游戏栏配置</string>
+    <string name="preset_save_current">保存当前配置</string>
+    <string name="preset_save_current_summary">根据当前设置创建新预设</string>
+    <string name="preset_import">从备份导入预设</string>
+    <string name="preset_import_summary">从导出的 JSON 文件加载</string>
+    <string name="preset_reset_default">重置为默认设置</string>
+    <string name="preset_reset_default_summary">将所有游戏栏设置恢复为默认值</string>
+    <string name="preset_saved_presets">已保存的预设</string>
+    <string name="preset_no_presets">尚未保存预设</string>
+    <string name="preset_no_presets_desc">保存当前配置以创建您的第一个预设</string>
+
+    <!-- Preset Dialog Titles -->
+    <string name="dialog_title_save_preset">保存预设</string>
+    <string name="dialog_title_rename_preset">重命名预设</string>
+    <string name="dialog_title_delete_preset">删除预设</string>
+    <string name="dialog_title_preset_options">预设选项</string>
+    
+    <!-- Preset Dialog Messages -->
+    <string name="dialog_message_preset_name">输入预设名称:</string>
+    <string name="dialog_message_delete_preset">确定要删除此预设吗？\n\n%s</string>
+    <string name="dialog_message_load_preset">加载此预设？当前设置将被替换。</string>
+    <string name="dialog_message_reset_default">将所有游戏栏设置重置为默认值吗？\n\n这将恢复所有的开关、颜色、尺寸和其他设置。此操作无法撤销。</string>
+    
+    <!-- Preset Actions -->
+    <string name="preset_action_load">加载</string>
+    <string name="preset_action_export">导出</string>
+    <string name="preset_action_rename">重命名</string>
+    <string name="preset_action_delete">删除</string>
+    
+    <!-- Preset Toast Messages -->
+    <string name="toast_preset_saved">预设已保存: %s</string>
+    <string name="toast_preset_loaded">预设已加载: %s</string>
+    <string name="toast_preset_deleted">预设已删除</string>
+    <string name="toast_preset_renamed">预设已重命名</string>
+    <string name="toast_preset_exported">预设已导出至: %s</string>
+    <string name="toast_preset_imported">预设导入成功</string>
+    <string name="toast_preset_save_failed">保存预设失败</string>
+    <string name="toast_preset_load_failed">加载预设失败</string>
+    <string name="toast_preset_delete_failed">删除预设失败</string>
+    <string name="toast_preset_export_failed">导出预设失败</string>
+    <string name="toast_preset_import_failed">导入预设失败</string>
+    <string name="toast_preset_name_empty">预设名称不能为空</string>
+    <string name="toast_preset_reset_success">设置已重置为默认</string>
+    
+    <!-- Preset Hints -->
+    <string name="hint_preset_name">预设名称</string>
+    <string name="preset_created">创建于: %s</string>
+    
+    <!-- Long Press Warning -->
+    <string name="warning_longpress_change_title">⚠️ 警告</string>
+    <string name="warning_longpress_change_message">更改长按功能将移除快速加载预设的入口。\n\n您仍可以通过以下方式访问预设：\n• 游戏栏设置 → 预设\n• 将“加载预设”分配给其他手势\n\n是否继续？</string>
+    <string name="warning_longpress_checkbox">我已了解，不再提醒</string>
+    <string name="warning_proceed">继续</string>
+    <string name="warning_cancel">取消</string>
+
+    <!-- Show/Hide Launcher Icon -->
+    <string name="show_launcher_icon">在桌面上显示图标</string>
+</resources>
