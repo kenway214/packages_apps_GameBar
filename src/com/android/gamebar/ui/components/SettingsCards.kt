@@ -59,6 +59,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -303,7 +304,11 @@ fun GameBarFloatingBottomNavBar(
                             modifier = Modifier
                                 .width(itemSize)
                                 .height(itemSize)
-                                .clickable { onTabSelected(tab) },
+                                .clip(CircleShape)
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) { onTabSelected(tab) },
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
